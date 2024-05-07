@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #222;
+}
+.box {
+  position: relative;
+  height: 500px;
+  width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+.box::after .box::before {
+  content: "";
+  position: absolute;
+}
+.table {
+  position: absolute;
+  height: 6px;
+  width: 340px;
+  left: 250px;
+  top: 380px;
+  background: #000;
+  border-radius: 3px;
+}
+.table::before {
+  content: "";
+  position: absolute;
+  height: 19px;
+  width: 131px;
+  left: 105px;
+  top: -15px;
+  border: 4px solid #000;
+  box-sizing: border-box;
+  border-radius: 6px;
+  background: #073044;
+}
+.aquarium {
+  position: relative;
+  height: 150px;
+  width: 210px;
+  left: 315px;
+  top: 220px;
+  box-sizing: border-box;
+  border: 5px solid #000;
+  border-radius: 40px 40px 50px 50px / 74px 74px 74px 74px;
+  box-shadow: inset -30px 0 0 0 rgba(54, 125, 231, 0.2);
+  overflow: hidden;
+  z-index: 1;
+}
+.wave {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 39px;
+  opacity: 0.5;
+  background: #5bb8ff;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  animation: animate 3s ease-in-out infinite;
+}
+@keyframes animate {
+  /* 0%,
+  100% {
+    clip-path: polygon(
+      0% 14%,
+      4% 16%,
+      7% 21%,
+      11% 23%,
+      15% 25%,
+      19% 25%,
+      23% 25%,
+      27% 24%,
+      30% 23%,
+      34% 22%,
+      36% 20%,
+      39% 20%,
+      43% 18%,
+      46% 17%,
+      50% 15%,
+      55% 15%,
+      59% 16%,
+      64% 17%,
+      69% 19%,
+      76% 20%,
+      82% 24%,
+      85% 25%,
+      89% 27%,
+      96% 31%,
+      100% 32%,
+      100% 100%,
+      0% 100%
+    );
+  } */
+
+  0%,
+  100% {
+    clip-path: polygon(0% 24%, 7% 28%, 14% 32%, 21% 34%, 29% 35%, 36% 36%, 42% 36%, 49% 36%, 57% 34%, 63% 30%, 69% 25%, 75% 21%, 82% 19%, 88% 20%, 95% 23%, 99% 27%, 100% 99%, 0% 100%);
+  }
+
+  50% {
+    /* clip-path: polygon(0% 24%, 7% 28%, 14% 32%, 21% 34%, 29% 35%, 36% 36%, 42% 36%, 49% 36%, 57% 34%, 63% 30%, 69% 25%, 75% 21%, 82% 19%, 88% 20%, 95% 23%, 99% 27%, 100% 99%, 0% 100%); */
+    /* clip-path: polygon(1% 20%, 6% 25%, 12% 29%, 20% 31%, 27% 31%, 34% 30%, 40% 27%, 47% 24%, 52% 21%, 59% 19%, 66% 18%, 74% 19%, 82% 22%, 88% 26%, 93% 30%, 100% 33%, 100% 99%, 1% 99%); */
+    clip-path: polygon(0% 28%, 9% 22%, 15% 16%, 22% 13%, 29% 15%, 36% 18%, 39% 23%, 46% 28%, 52% 32%, 58% 33%, 67% 33%, 74% 33%, 80% 28%, 86% 24%, 91% 20%, 99% 18%, 100% 100%, 0% 99%);
+  }
+}
+img {
+  position: absolute;
+  top: 40%;
+  height: 70px;
+  width: 160px;
+  right: 10%;
+}
